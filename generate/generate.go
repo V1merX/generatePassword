@@ -31,6 +31,10 @@ func (p *password) scanLengthPass() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	if p.length <= 0 {
+		log.Fatal("Некорректная длина пароля!")
+	}
 }
 
 func (p *password) generatePassword() {
